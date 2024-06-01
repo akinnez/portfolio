@@ -1,54 +1,69 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "my-app": {
-      "projectType": "application",
-      "root": ".",
-      "sourceRoot": "src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@analogjs/platform:vite",
-          "options": {
-            "configFile": "vite.config.ts",
-            "main": "src/main.ts",
-            "outputPath": "dist/client",
-            "tsConfig": "tsconfig.app.json"
-          },
-          "defaultConfiguration": "production",
-          "configurations": {
-            "development": {
-              "mode": "development"
-            },
-            "production": {
-              "sourcemap": false,
-              "mode": "production"
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "my-app": {
+            "projectType": "application",
+            "root": ".",
+            "sourceRoot": "src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@analogjs/platform:vite",
+                    "options": {
+                        "configFile": "vite.config.ts",
+                        "main": "src/main.ts",
+                        "outputPath": "dist/client",
+                        "tsConfig": "tsconfig.app.json"
+                    },
+                    "defaultConfiguration": "production",
+                    "configurations": {
+                        "development": {
+                            "mode": "development"
+                        },
+                        "production": {
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "100kb",
+                                    "maximumError": "200kb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "1kb",
+                                    "maximumError": "2kb"
+                                }
+                            ],
+                            "sourcemap": false,
+                            "mode": "production"
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@analogjs/platform:vite-dev-server",
+                    "defaultConfiguration": "development",
+                    "options": {
+                        "buildTarget": "my-app:build",
+                        "port": 3003
+                    },
+                    "configurations": {
+                        "development": {
+                            "buildTarget": "my-app:build:development",
+                            "hmr": true
+                        },
+                        "production": {
+                            "buildTarget": "my-app:build:production"
+                        }
+                    }
+                },
+                "test": {
+                    "builder": "@analogjs/platform:vitest"
+                }
             }
-          }
-        },
-        "serve": {
-          "builder": "@analogjs/platform:vite-dev-server",
-          "defaultConfiguration": "development",
-          "options": {
-            "buildTarget": "my-app:build",
-            "port": 5173
-          },
-          "configurations": {
-            "development": {
-              "buildTarget": "my-app:build:development",
-              "hmr": true
-            },
-            "production": {
-              "buildTarget": "my-app:build:production"
-            }
-          }
-        },
-        "test": {
-          "builder": "@analogjs/platform:vitest"
         }
-      }
+    },
+    "cli": {
+        "analytics": "15ffc23f-5be2-49fd-873a-f807ee41e3d7"
     }
-  }
 }

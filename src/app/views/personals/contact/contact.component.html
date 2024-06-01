@@ -1,0 +1,89 @@
+<main class="py-5 lg:py-10">
+    <Titled
+        styles="text-4xl font-bold italic py-5 text-center md:text-left"
+        content="Contact"
+    />
+
+    <div class="md:grid md:grid-cols-2 md:h-[400px] items-center">
+        <div>
+            <Titled
+                styles="my-3 text-xl font-semibold"
+                content="Reach out to me"
+            />
+            <div class="">
+                <div class="my-5 flex items-center gap-x-4">
+                    <Phone styles="w-6 h-6 fill-current" />
+                    <span class="text-lg font-medium italic">{{
+                        personal?.personalInfo.phone_number
+                    }}</span>
+                </div>
+
+                <div class="my-5 flex items-center gap-x-4">
+                    <Location styles="w-6 h-6 fill-current" />
+                    <span class="text-lg font-medium italic">{{
+                        personal?.personalInfo.location
+                    }}</span>
+                </div>
+                <a href="{{ personal?.personalInfo.website }}" target="_blank">
+                    <div class="my-5 flex items-center gap-x-4">
+                        <Globe styles="w-6 h-6 fill-current" />
+                        <span class="text-lg font-medium italic">{{
+                            personal?.personalInfo.website
+                        }}</span>
+                    </div></a
+                >
+            </div>
+        </div>
+
+        <div class="flex justify-center my-10 md:my-0">
+            <div class="w-[300px] h-[300px] bg-background rounded-full">
+                <img
+                    ngSrc="{{ personal?.images.me2 }}"
+                    width="300"
+                    height="300"
+                    alt="image-logo"
+                    priority
+                    class="rounded-full"
+                />
+            </div>
+        </div>
+    </div>
+
+    <div class="md:grid md:grid-cols-2">
+        <div class="my-5 border-t-4 border-foreground sm:border-none">
+            <Titled
+                styles="my-3 text-xl font-semibold"
+                content="Connect with me"
+            />
+
+            <div class="">
+                <Socials [social]="personal?.socials" text_needed="true" />
+            </div>
+        </div>
+
+        <div class="my-5 border-t-4 border-foreground sm:border-none">
+            <Titled styles="my-3 text-xl font-semibold" content="Message me" />
+            <div class="">
+                <a
+                    href="mailto:{{ personal?.personalInfo.email }}"
+                    target="_blank"
+                >
+                    <div class="my-5 flex items-center gap-x-4">
+                        <Mail styles="w-6 h-6 fill-current" />
+                        <span class="text-lg font-medium italic">{{
+                            personal?.personalInfo.email
+                        }}</span>
+                    </div>
+                </a>
+                <a href="{{ personal?.socials.whatsapp }}" target="_blank">
+                    <div class="my-5 flex items-center gap-x-4">
+                        <Whatsapp styles="w-6 h-6 fill-current" />
+                        <span class="text-lg font-medium italic">{{
+                            personal?.socials.whatsapp
+                        }}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>

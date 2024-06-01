@@ -1,0 +1,76 @@
+<div>
+    @if(personal){
+    <div class="sm:grid sm:grid-cols-2">
+        <div class="xl:h-[650px] flex items-center my-5 lg:my-0">
+            <div class="w-full py-5">
+                <Titled
+                    content="Hey, I'm"
+                    styles="uppercase tracking-wider font-semibold text-xl text-center italic"
+                />
+                <Titled
+                    content="{{ personal?.personalInfo.name }}"
+                    styles=" tracking-wider text-5xl text-center font-bold italic my-5"
+                />
+                <span class="text-center block">{{
+                    personal?.personalInfo.occupation
+                }}</span>
+
+                <Socials
+                    styles="flex justify-center px-10 gap-x-5 lg:gap-x-10"
+                    [social]="personal?.socials"
+                />
+            </div>
+        </div>
+        <div class="flex items-center justify-center">
+            <div>
+                <!-- <div
+                    class="w-[300px] h-[300px] shadow-2xl shadow-foreground rounded-full bg-transparent"
+                > -->
+                <Card
+                    styles="w-[300px] h-[300px] shadow-2xl shadow-foreground rounded-full bg-transparent"
+                >
+                    @if(personal?.images.me){
+                    <Avatar
+                        [link]="personal?.images.me"
+                        name="profile"
+                        width="300"
+                        height="300"
+                        styles="rounded-full bg-background"
+                    />
+                    }
+                </Card>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div
+        class="flex flex-col-reverse sm:grid sm:grid-cols-2 sm:items-center my-5 lg:my-0"
+    >
+        <div class="flex justify-center">
+            @if(personal?.images.welcome){
+            <Avatar
+                [link]="personal?.images.welcome"
+                name="services"
+                width="451"
+                height="346"
+            />
+            }
+        </div>
+        <div class="lg:px-10 lg:py-5">
+            <Titled
+                content="Services"
+                styles="text-4xl font-semibold italic my-5"
+            />
+            <p class="">I do offer wide range of services which includes</p>
+            <div class="border-l-4 border-foreground px-5">
+                @for(service of personal?.services; track service){
+                <Titled
+                    styles="font-semibold text-lg py-0 my-5"
+                    content="{{ service }}"
+                />
+                }
+            </div>
+        </div>
+    </div>
+    }
+</div>

@@ -1,0 +1,57 @@
+@if(social()){
+<div class="{{ styles() }}">
+    <a href="{{ social().facebook }}" target="_blank">
+        <div class="my-5 flex items-center gap-x-4">
+            <Facebook styles="w-7 h-7 fill-current" />
+            @if(text_needed()){
+            <span class="text-lg font-medium italic">{{
+                social().facebook
+            }}</span>
+
+            }
+        </div>
+    </a>
+    <a href="{{ social().twitter }}" target="_blank">
+        <div class="my-5 flex items-center gap-x-4">
+            <Twitter styles="w-7 h-7 fill-current" />
+            @if(text_needed()){
+            <span class="text-lg font-medium italic">{{
+                social().twitter
+            }}</span>
+
+            }
+        </div>
+    </a>
+    <a href="{{ social().linkedin }}" target="_blank">
+        <div class="my-5 flex items-center gap-x-4">
+            <Linkedin styles="w-7 h-7 fill-current" />
+            @if(text_needed()){
+            <span class="text-lg font-medium italic">{{
+                social().linkedin
+            }}</span>
+
+            }
+        </div>
+    </a>
+    <a href="{{ social().github }}" target="_blank">
+        <div class="my-5 flex items-center gap-x-4">
+            <Github styles="w-7 h-7 fill-current" />
+            @if(text_needed()){
+            <span class="text-lg font-medium italic">{{
+                social().github
+            }}</span>
+            }
+        </div>
+    </a>
+    <a href="{{ social().youtube }}" target="_blank">
+        <div class="my-5 flex items-center gap-x-4">
+            <Youtube styles="w-7 h-7 fill-current" />
+            @if(text_needed()){
+            <span class="text-lg font-medium italic">{{
+                social().youtube
+            }}</span>
+            }
+        </div>
+    </a>
+</div>
+}

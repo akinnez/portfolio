@@ -1,0 +1,28 @@
+<header
+    class="fixed z-50 w-full lg:w-fit lg:flex lg:items-center lg:h-screen bottom-0 lg:right-0"
+>
+    <ul
+        class="bg-background border border-foreground lg:w-fit lg:px-5 rounded-t-xl lg:rounded-full lg:py-10 lg:mx-8 flex lg:flex-col lg:static justify-center gap-x-10"
+    >
+        <a routerLink="/about">
+            <li class="py-2 my-5 px-3 cursor-pointer" title="About Me">
+                <User styles="h-6 w-6 fill-current" />
+            </li>
+        </a>
+        <a routerLink="/contact">
+            <li class="py-2 my-5 px-3 cursor-pointer" title="My Contact">
+                <Address-Card styles="h-6 w-6 fill-current" />
+            </li>
+        </a>
+        <a routerLink="/showroom">
+            <li class="py-2 my-5 px-3 cursor-pointer" title="Portfolio">
+                <Briefcase styles="h-6 w-6 fill-current" />
+            </li>
+        </a>
+        <a routerLink="/blog">
+            <li class="py-2 my-5 px-3 cursor-pointer" title="My Blog">
+                <Blog-Icon styles="h-6 w-6 fill-current" />
+            </li>
+        </a>
+    </ul>
+</header>

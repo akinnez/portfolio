@@ -1,0 +1,47 @@
+{
+    "personalInfo": {
+        "name": "Oladejo Akinola Idris",
+        "occupation": "Mathematician Software Engineer, Full-Stack Website Developer, Javascript/Typescript Developer and an Educator.",
+        "bio": "I am a Mathematician and Software Engineer with over 4 years of experience developing and delivering high-quality web applications. Expertise in a wide range of technologies, including HTML, CSS, Bootstrap, TailwindCSS, Angular, TypeScript, JavaScript, NextJs, Formik, Git, Bitbucket, Ant Design, Angular Material, Node, C#, and SQL and many more.  Proven ability to collaborate effectively with cross-functional teams and work independently to meet project deadlines. Passionate about building user-friendly and scalable software solutions. I am practically good and want to keep on getting better everyday",
+        "email": "oyetunjiidris@gmail.com",
+        "phone_number": "(+234)8109182995, (+234)8128887112",
+        "location": "Moniya, Ibadan, Oyo State, Nigeria.",
+        "website": "https://akinnez.vercel.app"
+    },
+    "images": {
+        "me": "/face-removebg-preview.png",
+        "me2": "/face2-removebg-preview.png",
+        "trueMe": "/trueMe.jpg",
+        "welcome": "/welcome-removebg-preview.png"
+    },
+    "services": [
+        "Website Development.",
+        "Project Development.",
+        "Technical Advice.",
+        "Developer Advocate",
+        "Project Writing.",
+        "Resume Writing."
+    ],
+
+    "socials": {
+        "facebook": "https://www.facebook.com/akinnez",
+        "whatsapp": "https://wa.me/+2348109182995",
+        "linkedin": "https://www.linkedin.com/in/oladejo-akinola-6716aa162",
+        "github": "https://www.github.com/akinnez",
+        "twitter": "https://www.x.com/@Akinola_idris",
+        "youtube": "https://www.youtube.com/@akinnez"
+    },
+
+    "techstack": [
+        { "name": "HTML5", "imgLink": "/analog.svg" },
+        { "name": "CSS3", "imgLink": "/analog.svg" },
+        { "name": "Bootstrap", "imgLink": "/analog.svg" },
+        { "name": "TailwindCSS", "imgLink": "/analog.svg" },
+        { "name": "JavaScript", "imgLink": "/analog.svg" },
+        { "name": "TypeScript", "imgLink": "/analog.svg" },
+        { "name": "Angular", "imgLink": "/analog.svg" },
+        { "name": "AnalogJs", "imgLink": "/analog.svg" },
+        { "name": "React", "imgLink": "/analog.svg" },
+        { "name": "NextJs", "imgLink": "/analog.svg" }
+    ]
+}

@@ -1,0 +1,48 @@
+<div class="py-5">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-x-10 lg:items-center lg:py-5">
+        <div class="">
+            <Titled content="Bio" styles="text-4xl font-bold italic py-5" />
+            <span class="leading-10">
+                {{ personal?.personalInfo.bio }}
+            </span>
+            <div class="flex items-center gap-5 sm:gap-10 my-5">
+                <a href="/" target="_blank" class="my-3 block">
+                    <Button>View My Resume</Button>
+                </a>
+                <a routerLink="/showroom" class="my-3 block">
+                    <Button> View My Portfolio </Button>
+                </a>
+            </div>
+        </div>
+        <div class="flex justify-center rounded-lg my-5 md:my-0">
+            <Avatar
+                [link]="personal?.images.trueMe"
+                name="image-logo"
+                width="800"
+                height="480"
+            />
+        </div>
+    </div>
+    <div class="">
+        <Titled
+            content="Technologies"
+            styles="text-4xl font-bold italic py-5"
+        />
+        <Overflow styles="lg:grid lg:grid-cols-5 gap-5">
+            @for(stack of personal?.techstack; track stack){
+            <Card styles="p-5 text-center rounded-xl">
+                <Avatar
+                    link="{{ stack.imgLink }}"
+                    name="{{ stack.name }}"
+                    width="200"
+                    height="200"
+                    styles="mx-auto"
+                />
+                <h4 class="w-[200px] lg:w-full text-lg">
+                    {{ stack.name }}
+                </h4>
+            </Card>
+            }
+        </Overflow>
+    </div>
+</div>
