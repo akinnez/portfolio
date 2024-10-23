@@ -7,6 +7,14 @@ import { portfolioType } from '../utils/types';
 export class PortfolioService {
     playground: portfolioType[] = [
         {
+            projectName: 'STN-Ng',
+            demoLink: 'https://stn-ng.vercel.app/',
+            description:
+                'Ship-to-naija (STN-ng) is a recreate web app for shiptonaija.com website.',
+            githubLink: 'https://www.github.com/akinnez/stn-ng',
+            stack: ['ang', 'ts', 'twc'],
+        },
+        {
             projectName: 'College Course Registration',
             demoLink: 'https://ccr-interswitch.vercel.app',
             description:
@@ -132,6 +140,17 @@ export class PortfolioService {
             stack: ['ang', 'ts', 'bs', 'chart'],
             iconHeight: '120',
             iconWidth: '120',
+        },
+        {
+            projectName: 'UpNextAfrika',
+            icon: '/images/upnext.PNG',
+            iconHeight: '100',
+            iconWidth: '100',
+            description:
+                'UpNextAfrika is a musical streaming web-app that showcase musician and their hit-track, the top-listening track of the week and many more...',
+            demoLink: 'https://frontend-beige-one-54.vercel.app/home',
+            githubLink: 'https://github.com/up-next-afrika/frontend',
+            stack: ['next', 'ts', 'twc', 'axios'],
         },
         {
             projectName: 'KreateSell',

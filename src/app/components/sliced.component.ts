@@ -41,7 +41,7 @@ import { portfolioType } from '../utils/types';
                     </span>
                     <div class="mt-5">
                         @if(showroom.stack){
-                        <div class="flex flex-wrap justify-end gap-3">
+                        <div class="flex flex-wrap justify-end gap-2">
                             @for(stack of showroom.stack; track stack){
                             <Status statusProps="{{ stack }}" />
                             }
