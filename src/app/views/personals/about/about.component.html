@@ -1,16 +1,33 @@
 <div class="py-5">
-    <div class="lg:grid lg:grid-cols-2 lg:gap-x-10 lg:items-center lg:py-5">
+    <Titled
+        content="Bio"
+        styles="text-4xl font-bold italic py-5 text-justify"
+    />
+    <div
+        class="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:gap-x-10 lg:items-center lg:py-5"
+    >
         <div class="">
-            <Titled content="Bio" styles="text-4xl font-bold italic py-5" />
             <span class="leading-10">
                 {{ personal?.personalInfo.bio }}
             </span>
             <div class="flex items-center gap-5 sm:gap-10 my-5">
-                <a href="/" target="_blank" class="my-3 block">
-                    <Button>View My Resume</Button>
+                <a
+                    href="https://drive.google.com/file/d/13HmQfDj_7iousXKvsVeznLdqA16XRn8Q/view"
+                    target="_blank"
+                    class="my-3 block"
+                >
+                    <button
+                        class="py-3 px-4 border-2 border-foreground rounded-2xl hover:text-background hover:bg-foreground"
+                    >
+                        View My Resume
+                    </button>
                 </a>
                 <a routerLink="/showroom" class="my-3 block">
-                    <Button> View My Portfolio </Button>
+                    <button
+                        class="py-3 px-4 border-2 border-foreground rounded-2xl hover:text-background hover:bg-foreground"
+                    >
+                        View My Portfolio
+                    </button>
                 </a>
             </div>
         </div>
@@ -30,17 +47,21 @@
         />
         <Overflow styles="lg:grid lg:grid-cols-5 gap-5">
             @for(stack of personal?.techstack; track stack){
-            <Card styles="p-5 text-center rounded-xl">
-                <Avatar
-                    link="{{ stack.imgLink }}"
-                    name="{{ stack.name }}"
-                    width="200"
-                    height="200"
-                    styles="mx-auto"
-                />
-                <h4 class="w-[200px] lg:w-full text-lg">
-                    {{ stack.name }}
-                </h4>
+            <Card
+                styles="p-5 text-center flex justify-center items-center rounded-xl h-[calc(15rem)]"
+            >
+                <div>
+                    <Avatar
+                        link="{{ stack.imgLink }}"
+                        name="{{ stack.name }}"
+                        width="150"
+                        height="150"
+                        styles="mx-auto"
+                    />
+                    <h4 class="w-[200px] lg:w-full text-lg mt-3">
+                        {{ stack.name }}
+                    </h4>
+                </div>
             </Card>
             }
         </Overflow>

@@ -6,7 +6,6 @@ import { AvatarComponent } from '../../../components/Avatar';
 import { TitledComponent } from '../../../components/Titled';
 import { ContentOverflowComponent } from '../../../components/content-overflow';
 import { CardComponent } from '../../../components/card';
-import { ButtonComponent } from '../../../components/button';
 
 import { GeneralService } from '../../../services/general.services';
 @Component({
@@ -18,7 +17,6 @@ import { GeneralService } from '../../../services/general.services';
         AvatarComponent,
         TitledComponent,
         CardComponent,
-        ButtonComponent,
         ContentOverflowComponent,
     ],
     templateUrl: './about.component.html',

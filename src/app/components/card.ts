@@ -4,7 +4,7 @@ import { Component, input } from '@angular/core';
     selector: 'Card',
     standalone: true,
     template: `
-        <div class="shadow shadow-foreground w-full {{ styles() }}">
+        <div class="shadow-sm shadow-foreground w-full {{ styles() }}">
             <ng-content />
         </div>
     `,

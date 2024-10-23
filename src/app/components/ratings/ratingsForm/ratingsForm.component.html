@@ -1,0 +1,29 @@
+<div>
+    <form [formGroup]="forms" (submit)="submitButton()">
+        <div>
+            <label for="email" class="font-semibold">Email:</label>
+            <input
+                type="email"
+                class="w-full py-5 px-3 border-2 border-foreground my-2 rounded-2xl"
+                formControlName="email"
+                email="true"
+            />
+        </div>
+        <div>
+            <label for="comment" class="font-semibold"
+                >Comment <i>(optional)</i> :</label
+            >
+            <textarea
+                cols="30"
+                rows="10"
+                class="w-full border-2 border-foreground rounded-2xl my-2 px-3 py-5"
+                formControlName="comment"
+            ></textarea>
+        </div>
+        <button
+            class="py-3 px-4 w-full border-2 border-foreground rounded-2xl hover:text-background hover:bg-foreground"
+        >
+            Submit Review
+        </button>
+    </form>
+</div>

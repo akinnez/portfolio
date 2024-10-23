@@ -6,7 +6,7 @@ import { AvatarComponent } from '../Avatar';
 @Component({
     selector: 'Top-Nav',
     standalone: true,
-    imports: [NgOptimizedImage, RouterModule, AvatarComponent],
+    imports: [RouterModule, AvatarComponent],
     template: `
         <a routerLink="/">
             <div

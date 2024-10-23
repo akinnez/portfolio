@@ -21,6 +21,8 @@ import { GeneralService } from '../../services/general.services';
     templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent implements OnInit {
+    //move these set of code to the app.component.ts
+
     public general_services = inject(GeneralService);
 
     personal: any;

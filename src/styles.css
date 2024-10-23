@@ -8,21 +8,25 @@
     :root {
         --background: 0, 0%, 100%;
         --foreground: 208, 37%, 20%;
+        --tertiary: 49, 71%, 49%;
     }
 
-    .dark {
+    /* :root {
         --background: 208, 37%, 20%;
         --foreground: 49, 71%, 49%;
-    }
+        --tertiary: 0, 0%, 100%;
+    } */
 }
 
 @layer base {
     * {
-        font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+        /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
         font-size: 16px;
         line-height: 24px;
         font-weight: 400;
-        transition: all 500ms linear;
+        transition: all 200ms linear;
         font-synthesis: none;
         text-rendering: optimizeLegibility;
         scroll-snap-type: mandatory;
@@ -33,6 +37,6 @@
         -webkit-text-size-adjust: 100%;
     }
     body {
-        @apply text-foreground bg-background;
+        @apply bg-background text-foreground;
     }
 }

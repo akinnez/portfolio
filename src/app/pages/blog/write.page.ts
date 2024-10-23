@@ -37,8 +37,6 @@ export default class WriteBlogPageComponent implements OnInit {
     async loadComponent(queryParams: string | undefined) {
         this.write()?.clear();
         if (queryParams) {
-            console.log(queryParams);
-
             const { EditBlogComponent } = await import(
                 '../../views/blogs/edit/edit.component'
             );
@@ -50,8 +48,6 @@ export default class WriteBlogPageComponent implements OnInit {
         );
 
         this.write()?.createComponent(CreateBlogComponent);
-        console.log('ddd');
-
         return;
     }
 }

@@ -1,0 +1,15 @@
+<div class="p-10">
+    <p class="text-2xl font-semibold my-5">Leave a review</p>
+    <div class="lg:grid lg:grid-cols-2 lg:gap-x-10">
+        <div class="flex items-center justify-center">
+            <RatingStar
+                styles="gap-5"
+                starStyles="!h-12 !w-12"
+                (ratingValue)="ratingValue($event)"
+            />
+        </div>
+        <div class="mt-10 lg:my-0">
+            <RatingsForm [ratingValue]="ratings()" />
+        </div>
+    </div>
+</div>

@@ -1,21 +1,54 @@
 <main>
-    <div class="lg:grid lg:grid-cols-2">
-        <div>
-            <Titled
-                styles="text-4xl font-bold italic py-5 text-center md:text-left"
-                content="The Showroom"
-            />
-            <span class="leading-loose"
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                laudantium iure illo assumenda voluptates. Tempora assumenda
-                cum, blanditiis animi officiis nesciunt dolorum omnis natus,
-                quasi molestias culpa dolorem perferendis illo! Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Cumque laudantium
-                iure illo assumenda voluptates. Tempora assumenda cum,
-                blanditiis animi officiis nesciunt dolorum omnis natus, quasi
-                molestias culpa dolorem perferendis illo!
-            </span>
-        </div>
+    <div class="">
+        <Titled
+            styles="text-4xl font-bold italic py-5 text-center md:text-left"
+            content="The Showroom"
+        />
     </div>
-    <div></div>
+    <div>
+        <Titled
+            styles="text-2xl font-bold italic py-5 lg:text-left"
+            content="Projects"
+        />
+        <span class="leading-loose text-lg">
+            This section showcase all the major projects done over the years.
+        </span>
+        <!-- Uncomment when the rating feature is implemented -->
+        <!-- <Sliced
+            [portfolio]="portfolio"
+            category="portfolio"
+            (openRatings)="openRatings($event)"
+            className="lg:!h-[calc(80vh)]"
+        /> -->
+        <Sliced [portfolio]="service.portfolio" category="portfolio" />
+    </div>
+
+    <div class="my-10">
+        <Titled
+            styles="text-2xl font-bold italic py-5 lg:text-left"
+            content="Playground"
+        />
+        <span class="leading-loose text-lg">
+            This section showcase all freestyling task done.
+        </span>
+
+        <!-- Uncomment when the rating feature is implemented -->
+        <!-- <Sliced
+            [portfolio]="playground"
+            category="playground"
+            (openRatings)="openRatings($event)"
+        /> -->
+
+        <Sliced [portfolio]="service.playground" category="playground" />
+    </div>
+    <!-- Uncomment when the rating feature is implemented -->
+    <!-- @if(open()){
+    <Modal
+        [header]="header()"
+        (onOpenChange)="openRatings()"
+        styles="!max-w-5xl overflow-y-auto h-screen"
+    >
+        <Ratings />
+    </Modal>
+    } -->
 </main>

@@ -1,11 +1,11 @@
 <div>
     @if(personal){
     <div class="sm:grid sm:grid-cols-2">
-        <div class="xl:h-[650px] flex items-center my-5 lg:my-0">
+        <div class="xl:h-[500px] flex items-center my-5 lg:my-0">
             <div class="w-full py-5">
                 <Titled
                     content="Hey, I'm"
-                    styles="uppercase tracking-wider font-semibold text-xl text-center italic"
+                    styles="uppercase tracking-wider font-semibold text-2xl text-center italic"
                 />
                 <Titled
                     content="{{ personal?.personalInfo.name }}"
@@ -23,11 +23,8 @@
         </div>
         <div class="flex items-center justify-center">
             <div>
-                <!-- <div
-                    class="w-[300px] h-[300px] shadow-2xl shadow-foreground rounded-full bg-transparent"
-                > -->
                 <Card
-                    styles="w-[300px] h-[300px] shadow-2xl shadow-foreground rounded-full bg-transparent"
+                    styles="w-[300px] h-[300px] !shadow-none lg:!shadow-2xl lg:!shadow-foreground rounded-full bg-transparent"
                 >
                     @if(personal?.images.me){
                     <Avatar
@@ -39,7 +36,6 @@
                     />
                     }
                 </Card>
-                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -47,14 +43,12 @@
         class="flex flex-col-reverse sm:grid sm:grid-cols-2 sm:items-center my-5 lg:my-0"
     >
         <div class="flex justify-center">
-            @if(personal?.images.welcome){
             <Avatar
-                [link]="personal?.images.welcome"
+                link="/welcome-removebg-preview.png"
                 name="services"
                 width="451"
                 height="346"
             />
-            }
         </div>
         <div class="lg:px-10 lg:py-5">
             <Titled
