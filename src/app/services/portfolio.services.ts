@@ -24,7 +24,7 @@ export class PortfolioService {
         },
         {
             projectName: 'HYBRIDZ',
-            demoLink: 'https://akinnez/github.io/myCinema/html/index.html',
+            demoLink: 'https://akinnez.github.io/myCinema/html/index.html',
             description:
                 'HYBRIDZ is a cinema website that bridges the gap between experiencing a cinematic view in a cinema and the cinematic view at home',
             githubLink: 'https://www.github.com/akinnez/myCinema',
@@ -42,7 +42,7 @@ export class PortfolioService {
         {
             projectName:
                 'L. C. M and H. C. F calculation with real-time solution',
-            demoLink: 'https://akinnez/github.io/LCM/Lcm.html',
+            demoLink: 'https://akinnez.github.io/LCM/Lcm.html',
             description:
                 'This is a freestyle task worked on to help young mathematicians implement L.C.M using the H.C.F approach.',
             githubLink: 'https://www.github.com/akinnez/LCM',
@@ -51,7 +51,7 @@ export class PortfolioService {
         {
             projectName: 'The Factorial Calculator',
             demoLink:
-                'https://akinnez/github.io/myfactorialcalc/factorialcalculator.html',
+                'https://akinnez.github.io/myfactorialcalc/factorialcalculator.html',
             description:
                 'The Factorial Calculator is a calculator that gets you the answers to various mathematical calculation that involves factorials like factorial, permutation, combination and pascal triangle.',
             githubLink: 'https://www.github.com/akinnez/myfactorialcalc',
@@ -60,7 +60,7 @@ export class PortfolioService {
         {
             projectName: 'Matrix and Determinant',
             demoLink:
-                'https://akinnez/github.io/simultaneous/simultaneous.html',
+                'https://akinnez.github.io/simultaneous/simultaneous.html',
             description:
                 'This is a simple app that helps to determine the determinant of matrices of either a 2 × 2 matrix or a 3 × 3 matrix. Also, it can also solve an equation of two-variable equation and three-variable equation.',
             githubLink: 'https://www.github.com/akinnez/simultaneous',
