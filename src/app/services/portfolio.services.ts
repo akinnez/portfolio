@@ -82,7 +82,7 @@ export class PortfolioService {
             icon: '/images/marcain.png',
             description:
                 'Marcain Co-operative is a financial cooperative group.',
-            demoLink: 'https://www.macainewebadmin.vercel.app',
+            demoLink: 'https://macainewebadmin.vercel.app',
             githubLink: 'https://www.github.com/devsoftamos/macaine-web-admin',
             stack: ['next', 'ts', 'twc', 'shad', 'axios', 'rechart'],
         },
