@@ -135,8 +135,7 @@ export class PortfolioService {
             description:
                 'Current Price is a web-app that captures market price trends in real-time.',
             demoLink: 'https://www.currentpriceng.com',
-            githubLink:
-                'https://www.https://github.com/Ozurumba/currentprice-web',
+            githubLink: 'https://www.github.com/Ozurumba/currentprice-web',
             stack: ['ang', 'ts', 'bs', 'chart'],
             iconHeight: '120',
             iconWidth: '120',
@@ -149,7 +148,7 @@ export class PortfolioService {
             description:
                 'UpNextAfrika is a musical streaming web-app that showcase musician and their hit-track, the top-listening track of the week and many more...',
             demoLink: 'https://frontend-beige-one-54.vercel.app/home',
-            githubLink: 'https://github.com/up-next-afrika/frontend',
+            githubLink: 'https://www.github.com/up-next-afrika/frontend',
             stack: ['next', 'ts', 'twc', 'axios'],
         },
         {
