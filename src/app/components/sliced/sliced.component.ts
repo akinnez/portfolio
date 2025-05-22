@@ -21,7 +21,7 @@ import { RatingStarComponent } from '../ratingStar.component';
 export class SlicedComponent implements OnInit {
     className = input<string>('');
     portfolio = input<portfolioType[]>([]);
-    category = input<string>();
+    category = input<string>('');
     openRatings = output();
     portfolioValue = signal<portfolioType[]>([]);
 

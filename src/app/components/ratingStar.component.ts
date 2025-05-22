@@ -42,7 +42,7 @@ import { HalfStarComponent } from '../utils/icons/halfStar.component';
 export class RatingStarComponent implements OnInit {
     styles = input<string>('');
     starStyles = input<string>('');
-    ratingStar = input<string | null>(null);
+    ratingStar = input<string | number | null | undefined>(null);
     ratingValue = output();
 
     rating = signal<number>(0);
